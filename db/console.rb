@@ -42,8 +42,9 @@ album4 = Album.new({
   })
 album4.save()
 
-# album3.delete()
+album3.delete()
 
+# artist3.delete()
 
 artist1.albums()
 
