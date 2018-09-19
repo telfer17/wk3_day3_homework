@@ -37,9 +37,16 @@ class Artist
   end
 
 
-  def update()
-    sql = "UPDATE artists SET name = $1 WHERE id = $2"
-    values = [@name, @id]
+  # def update()
+  #   sql = "UPDATE artists SET name = $1 WHERE id = $2"
+  #   values = [@name, @id]
+  # end
+
+  def self.all()
+    sql = "SELECT * FROM artists"
+    artist_hashes = SQLRunner.run(sql)
+    artists = artist_hashes.map { |artist| Artist.new(artist) }
+    return artists
   end
 
 end
