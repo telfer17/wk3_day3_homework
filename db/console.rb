@@ -11,6 +11,9 @@ artist1.save()
 artist2 = Artist.new({"name" => "Oasis"})
 artist2.save()
 
+artist3 = Artist.new({"name" => "John O'Callaghan"})
+artist3.save()
+
 album1 = Album.new({
   "title" => "Recovery",
   "genre" => "Rap",
@@ -32,17 +35,26 @@ album3 = Album.new({
   })
 album3.save()
 
+album4 = Album.new({
+  "title" => "Unfold",
+  "genre" => "Trance",
+  "artist_id" => artist3.id
+  })
+album4.save()
+
+# album3.delete()
+
 
 artist1.albums()
 
 album2.artists()
 
-# artist2.name = "Kanye West"
-# artist2.update()
-#
-# album2.title = "Graduation"
-# album2.genre = "Rap"
-# album2.update()
+artist2.name = "Kanye West"
+artist2.update()
+
+album2.title = "Graduation"
+album2.genre = "Rap"
+album2.update()
 
 all_artists = Artist.all()
 
