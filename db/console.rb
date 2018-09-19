@@ -37,5 +37,14 @@ artist1.albums()
 
 album2.artists()
 
+artist2.name = "Kanye West"
+artist2.update()
+
+album2.title = "Graduation"
+album2.genre = "Rap"
+album2.update()
+
+
+
 binding.pry
 nil
